@@ -1,0 +1,127 @@
+
+/** Dark Theme */
+.mermaid {
+    --mermaid-theme: var(--mermaid-theme-dark);
+}
+pre.mermaid {
+    color: #ffffff;
+    background-color: #00000072;
+}
+
+/** Mobile Friendly */
+body {
+    overflow-x: hidden;
+}
+div.table-of-contents {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+}
+
+/** Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/** Table of Contents (Super modern UI) */
+ul#table-of-contents {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li#table-of-contents {
+    float: left;
+}
+li#table-of-contents a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li#table-of-contents a:hover:not(.active) {
+    background-color: #111;
+}
+div.table-of-contents {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+div.table-of-contents ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+div.table-of-contents li {
+    float: left;
+}
+div.table-of-contents li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+div.table-of-contents li a:hover:not(.active) {
+    background-color: #111;
+}
+
+/** Mermaid */
+.mermaid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    max-height: 600px;
+    overflow: auto;
+    border-radius: 4px;
+}
+
+.mermaid-container pre.mermaid {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    border-radius: 4px;
+}
+
+/** Header */
+h1#connect-umc-sound {
+    font-family: "Futura", sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/** Load fonts (google futura) */
+@font-face {
+    font-family: 'Futura';
+    src: url('https://fonts.googleapis.com/css2?family=Futura:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+}
