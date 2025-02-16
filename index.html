@@ -22,7 +22,7 @@
 
     <!--  -->
     <h2 id="wiring-diagram" class="display-2 text-center mt-5">Wiring Diagram</h2>
-    <div class="mermaid-container justify-content-center mb-5">
+    <div id="mermaid-wiring-diagram" class="mermaid-container justify-content-center mb-5">
         <pre class="mermaid">
             ---
             config:
@@ -71,9 +71,9 @@
                 style sg_drums color:#000000,fill:#FFFFFF00,stroke:#FFFFFF00
         </pre>
     </div>
-    <h2 id="layer-diagram" class="display-2 text-center mt-5">Layer Diagram</h2>
     
-    <div class="mermaid-container justify-content-center mb-5">
+    <h2 id="layer-diagram" class="display-2 text-center mt-5">Layer Diagram</h2>
+    <div id="mermaid-layer-diagram" class="mermaid-container justify-content-center mb-5">
         <pre class="mermaid">
             ---
             config:
@@ -179,6 +179,48 @@
         </pre>
     </div>
 
+    <h2 id="aviom-diagram" class="display-2 text-center mt-5">Aviom Diagram</h2>
+    <div id="mermaid-aviom-diagram" class="mermaid-container justify-content-center mb-5">
+        <pre class="mermaid">
+            ---
+            config:
+              theme: dark
+            ---
+            block-beta
+                columns 16
+                1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9
+                10
+                11
+                12
+                13
+                14
+                15
+                16
+                label_1_2["Master Mix L/R"]:2
+                label_3["Lead Vocal"]
+                label_4["Backup Vocal"]
+                label_5["Keys Vocal"]
+                label_6["Guitar Vocal"]
+                label_7["Keys"]
+                label_8["Click Track"]
+                label_9["Guitar"]
+                label_10["Bass Track"]
+                label_11["Main Track"]
+                label_12["Drum Track"]
+                label_13["Kick"]
+                label_14["Snare"]
+                label_15_16["Drums Master"]:2
+        </pre>
+    </div>
+    
     <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/+esm';
     mermaid.initialize({ startOnLoad: true});
