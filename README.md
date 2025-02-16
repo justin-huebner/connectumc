@@ -1,5 +1,5 @@
 # Connect UMC Sound
-
+[Connect UMC Tech Wiki](../../wiki)
 ## Wiring Diagram
 ```mermaid
 ---
