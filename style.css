@@ -95,9 +95,9 @@ div.table-of-contents li a:hover:not(.active) {
     align-items: center;
     margin: 20px auto;
     width: 100%;
-    max-width: 700px;
+    max-width: 80vw;
     height: auto;
-    max-height: 600px;
+    max-height: 85vh;
     overflow: auto;
     border-radius: 4px;
 }
@@ -118,6 +118,14 @@ h1#connect-umc-sound {
     font-size: 3rem;
     text-align: center;
     color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    /* underline */
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 0.5rem;
 }
 
 /** Load fonts (google futura) */
