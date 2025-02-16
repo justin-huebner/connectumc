@@ -1,0 +1,53 @@
+<pre class="mermaid">
+    ---
+    config:
+      theme: neo-dark
+    title: Wiring Diagram
+    ---
+    flowchart
+        board@{ shape: "hex", label: "Sound Board\nfa:fa-sliders" }
+        patch@{ shape: "lin-rect", label: "Patch Board (Under Stage)" }
+        ipad@{ shape: "dbl-circ", label: "iPad📱" }
+        a4c@{ shape: "st-rect", label: "Audio 4c" }
+        subgraph sg_instruments[" "]
+            i_guitar@{ shape: "circle", label: "Guitar\n🎸" }
+            i_keys@{ shape: "circle", label: "Keyboard\n🎹" }
+            i_drums@{ shape: "circle", label: "Drums\n🥁" }
+        end
+        subgraph sg_drums[" "]
+            preamp@{ shape: "hex", label: "Pre-Amp" }
+            snare@{ shape: "rectangle", label: "Snare\n(Track)" }
+            kick@{ shape: "rectangle", label: "Kick\n(Main)" }
+            master1@{ shape: "rectangle", label: "Master 1\n(Track)" }
+            master2@{ shape: "rectangle", label: "Master 2\n(Track)" }
+        end
+        subgraph sg_tracks[" "]
+            t_click@{ shape: "rectangle", label: "Click\n(Track)" }
+            t_track@{ shape: "rectangle", label: "Track\n(Main)" }
+            t_bass@{ shape: "rectangle", label: "Bass\n(Track)" }
+            t_drum@{ shape: "rectangle", label: "Drums\n(Track)" }
+        end
+        patch ===|"#1-16"| board
+        preamp === |"#17-20"| board
+        ipad --- a4c
+        a4c --- t_click & t_track & t_bass & t_drum
+        t_click ---|"#8"| patch 
+        t_track ---|"#11"| patch
+        t_bass ---|"#10"| patch
+        t_drum ---|"#12"| patch
+        i_guitar ---|"#9"| patch
+        i_keys ---|"#7"| patch
+        i_drums --- snare & kick & master1 & master2
+        snare ---|"#17"| preamp
+        kick ---|"#18"| preamp
+        master1 ---|"#19"| preamp
+        master2 ---|"#20"| preamp
+        style sg_tracks color:#000000,fill:#FFFFFF00,stroke:#FFFFFF00
+        style sg_instruments color:#000000,fill:#FFFFFF00,stroke:#FFFFFF00
+        style sg_drums color:#000000,fill:#FFFFFF00,stroke:#FFFFFF00
+</pre>
+  
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/+esm';
+mermaid.initialize({ startOnLoad: true});
+</script>
